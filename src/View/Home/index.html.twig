@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="row">
+    {% for product in products %}
+    <div class="col-lg-4">
+        <div class="card">
+            <img src="https://media.gq.com/photos/5fa2ce5dc0e38edb6bd3ac91/4:3/w_1500,h_1125,c_limit/airmax.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <p>{{product.price}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="" class="btn btn-primary">SHOW</a>
+                <a href="" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
